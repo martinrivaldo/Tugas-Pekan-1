@@ -37,13 +37,13 @@ public class Kalkulator {
         FileWriter myWriter = new FileWriter("result.txt");
         double hasil;
         System.out.println("Masukkan angka pertama = ");
-        int angka1 = scan.nextInt();
+        double angka1 = scan.nextDouble();
         System.out.println("Masukkan angka kedua = ");
-        int angka2 = scan.nextInt();
+        double angka2 = scan.nextDouble();
         hasil = angka1 + angka2;
         myWriter.write(String.valueOf(hasil));
         myWriter.close();
-        System.out.println("Hasil = " + hasil);
+        System.out.printf("Hasil = %.1f  " ,hasil);
 
     }
 
@@ -54,13 +54,13 @@ public class Kalkulator {
 
         double hasil;
         System.out.println("Masukkan angka pertama = ");
-        int angka1 = scan.nextInt();
+        double angka1 = scan.nextDouble();
         System.out.println("Masukkan angka kedua = ");
-        int angka2 = scan.nextInt();
+        double angka2 = scan.nextDouble();
         hasil = angka1 - angka2;
         myWriter.write(String.valueOf(hasil));
         myWriter.close();
-        System.out.println("Hasil = " + hasil);
+        System.out.printf("Hasil = %.1f " ,hasil);
 
     }
 
@@ -72,13 +72,13 @@ public class Kalkulator {
 
         double hasil;
         System.out.println("Masukkan angka pertama = ");
-        int angka1 = scan.nextInt();
+        double angka1 = scan.nextDouble();
         System.out.println("Masukkan angka kedua = ");
-        int angka2 = scan.nextInt();
-        hasil = angka1 * angka2;
+        double angka2 = scan.nextDouble();
+        hasil =  angka1 * angka2;
         myWriter.write(String.valueOf(hasil));
         myWriter.close();
-        System.out.println("Hasil = " + hasil);
+        System.out.printf("Hasil = %.1f" , hasil);
 
     }
 
@@ -90,18 +90,18 @@ public class Kalkulator {
 
         double hasil;
         System.out.println("Masukkan angka pertama = ");
-        int angka1 = scan.nextInt();
+        double angka1 = scan.nextDouble();
         System.out.println("Masukkan angka kedua = ");
-        int angka2 = scan.nextInt();
+        double angka2 = scan.nextDouble();
         if (angka1 == 0 || angka2 == 0) {
             myWriter.write("Cannot divide by zero");
             myWriter.close();
             System.out.println("Cannot divide by zero");
         } else {
-            hasil = angka1 / angka2;
+            hasil = (double)angka1 / angka2;
             myWriter.write(String.valueOf(hasil));
             myWriter.close();
-            System.out.println("Hasil = " + hasil);
+            System.out.printf("Hasil = %.2f" , hasil);
 
         }
     }
