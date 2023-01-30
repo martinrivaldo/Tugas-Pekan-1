@@ -94,7 +94,9 @@ public class Kalkulator {
         System.out.println("Masukkan angka kedua = ");
         int angka2 = scan.nextInt();
         if (angka1 == 0 || angka2 == 0) {
-            System.out.println(0);
+            myWriter.write("Cannot divide by zero");
+            myWriter.close();
+            System.out.println("Cannot divide by zero");
         } else {
             hasil = angka1 / angka2;
             myWriter.write(String.valueOf(hasil));
@@ -114,10 +116,17 @@ public class Kalkulator {
         System.out.println("Masukkan angka kedua = ");
         int angka2 = scan.nextInt();
         int hasil;
-        hasil = angka1 % angka2;
-        myWriter.write(String.valueOf(hasil));
-        myWriter.close();
-        System.out.println("Hasil = " + hasil);
+        if (angka1 == 0 || angka2 == 0){
+            myWriter.write("Cannot divide by zero");
+            myWriter.close();
+            System.out.println("Cannot divide by zero");
+        } else {
+            hasil = angka1 % angka2;
+            myWriter.write(String.valueOf(hasil));
+            myWriter.close();
+            System.out.println("Hasil = " + hasil);
+        }
+
 
     }
 
