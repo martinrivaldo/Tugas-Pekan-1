@@ -1,5 +1,7 @@
 package Kawah.Edukasi;
 
+import java.io.FileInputStream;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -11,5 +13,9 @@ public class Main {
 
         String hasil = ok == "ok" ? "Hello world": "salah";
         System.out.println(hasil);
+
+        System.out.println(2/0);
+
+
     }
 }
